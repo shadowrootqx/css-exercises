@@ -1,1 +1,18 @@
-/* Add CSS Styling */
+.red-background {
+    background-color: rgb(255, 180, 180);
+    font-family: Verdana, "DejaVu Sans", sans-serif; 
+}
+
+#second-element {
+    color: rgb(10, 10, 225);
+    font-size: 36px;
+}
+
+.size-24px {
+    font-size: 24px;
+}
+
+#fourth-element {
+    background-color: rgb(150, 250, 150);
+    font-weight: bold;
+}
