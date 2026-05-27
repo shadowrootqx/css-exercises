@@ -5,23 +5,38 @@ body {
 
 .card {
   width: 400px;
-  background: #fff;
+  background: #fff; 
   margin: 16px auto;
+  padding: 8px; /* introduced by me */
 }
 
 .title {
   background: #e3f4ff;
+  margin-bottom: 8px; /* introduced by me */
+  padding: 8px; /* introduced by me */
+  font-size: 16px; /* introduced by me */
 }
 
 .content {
   background: #e3f4ff;
+  margin-bottom: 8px; /* introduced by me */
+  padding: 16px 8px; /* For body text we need more space on top and at the bottom. */
+  /* No need to redefine font-size here since browsers defaults to 16px for body text. 
+   It was only necessary for the h1 to override the default larger heading size. */
 }
 
 .button-container {
   background: #e3f4ff;
+  /* We don't need margin for the last one */
+  padding: 8px; /* introduced by me */
+  /* Also we don't need to redefine font-size since the browser uses 16px */
+  text-align: center; /* introduced by me */
 }
 
 button {
   background: white;
   border: 1px solid #eee;
+  margin: 0 auto; /* introduced by me */
+  display: block; /* introduced by me */
+  padding: 8px 24px; /* Spacing generally has to be defined in multiples of 4 and 8 */
 }
