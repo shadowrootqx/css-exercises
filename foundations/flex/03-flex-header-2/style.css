@@ -12,6 +12,10 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  /* added by me */
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
 }
 
 .profile-image {
@@ -45,4 +49,25 @@ a {
 
 ul {
   list-style-type: none;
+  /* added by me */
+  display: flex;
+  gap: 16px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+}
+
+.right-container {
+  display: flex;
+  /* justify-content: center not needed here because there is no empty space left on x axis due to 
+  the container shrinking to fit its content. This is the standard behavior of a flex container */
+  align-items: center;
+  gap: 16px;
 }
