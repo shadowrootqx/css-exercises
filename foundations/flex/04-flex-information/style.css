@@ -1,5 +1,9 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  /* added by me */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {
@@ -10,6 +14,8 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  /* added by me */
+  margin-bottom: 32px;
 }
 
 /* do not edit this footer */
@@ -23,4 +29,34 @@ img {
   align-items: center;
   justify-content: center;
   background: #eee;
+}
+
+/* added by me - the parent container that keeps the small containers (img's plus text) */
+.images {
+  display: flex;
+  gap: 52px;
+}
+
+/* the child containers that keep img's plus text */
+.barberry, .chilli, .pepper, .saffron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 200px; 
+  /* Initially, my approach was 'width: 200px; flex: 1 1 auto;' but the text 
+  was not wrapping as required. Inspecting in DevTools, the parent container (.images) had a locked width of
+  956px. Why? Because the child containers remained rigid at 200px due to the 'width: 200px' property. The 
+  parent's 956px width comes from the children's total width plus the gaps: 4*200px (width) + 3*52px (gap) = 956px.
+  Because the width of the children is fixed at 200px, the browser treats 956px as the absolute 
+  minimum width of the parent to prevent breaking the design. When the viewport is shrunk, the parent 
+  container refuses to shrink and overflows past the screen border. 
+  
+  The solution is using 'flex: 0 1 200px' on the children without a fixed 'width'. Now, the parent container
+  shrinks from 956px down to 556px (4*100+3*52) and the child containers shrink from 200px to 100px. They 
+  stop at 100px because the browser encounters the largest inflexible element inside them, which is the 
+  'img' with a fixed width of 100px ((4 * 100px) + (3 * 52px) = 556px). */
+}
+
+.text {
+  text-align: center; 
 }
