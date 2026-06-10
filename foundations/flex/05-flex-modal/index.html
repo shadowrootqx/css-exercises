@@ -10,11 +10,14 @@
   <body>
     <div class="modal">
       <div class="icon">!</div>
-      <div class="header">Are you sure you want to do that?</div>
-      <button class="close-button">✖</button>
-      <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
-      <button class="continue">Continue</button>
-      <button class="cancel">Cancel</button>
+      <div class="container"> <!-- Capture all elements except the icon in a single div. No need for flexbox here because all child elements stack on top of each other  -->
+        <div class="header">Are you sure you want to do that? <!-- This div becomes a flexbox parent for close-button since we want them on the same row -->
+          <button class="close-button">✖</button>
+        </div>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
+        <button class="continue">Continue</button> <!-- No need to capture these buttons in a flexbox as they are inline elements and arrange side by side in the normal flow -->
+        <button class="cancel">Cancel</button>
+      </div>
     </div>
   </body>
 </html>
