@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /* My solution - make body a flexbox. */
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +19,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* My solution. */
+  padding: 8px 16px;
 }
 
 input {
@@ -23,4 +28,48 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* My solution */
+/* Make header a flexbox to align ul's on a single row. */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+
+}
+
+/* Make footer a flexbox to align ul's on a single row. */
+.footer {
+  background: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 16px;
+
+}
+
+/* Remove underlines from the links. */
+a {
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+}
+
+/* Remove bullets from ul's and make them flexbox to align child links on a row. */
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  gap: 16px;
+}
+
+/* Make content a flexbox to align logo img, input box and buttons vertically. */
+.content {
+  flex: 1; /* This inflates content as there is empty space unde the footer so content pushes now the footer down to the body edge. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
