@@ -27,3 +27,67 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* My solution */
+/* Make body a flexbox. */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Define .content to arrange the sidebar and the cards side by side */
+.content {
+  display: flex;
+  flex: 1; /* Inflate content to push footer down to the edge of the screen */
+}
+
+/* Define the cards container to capture all cards and arrange them in a flexbox */
+.cards {
+  display: flex;
+  padding: 48px;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Define a width and padding for each card */
+.card {
+  width: 260px;
+  padding: 8px;
+}
+
+/* Make the header a flexbox to align the text vertically */
+.header {
+  font-size: 32px;
+  font-weight: 900;
+  display: flex; 
+  align-items: center;
+  padding-left: 16px;
+}
+
+/* Make the footer a flexbox to align the text horizontally and vertically */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Define padding for sidebar and make flex-shrink to 0 so that it remains rigid when the screen is squished. */
+.sidebar {
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+/* Remove bullets, padding and margin from ul's */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove underlines from links */
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
